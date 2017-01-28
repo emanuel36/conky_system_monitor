@@ -1,3 +1,8 @@
+################################
+#Developed By: Emanuel Angelim#
+#email: emanuel_ec@alu.ufc.br #
+###############################
+
 gap_x 20
 gap_y 30
 alignment top_right
