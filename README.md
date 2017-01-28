@@ -13,4 +13,5 @@ You need the Conky Manager software, to install it execute the commands below in
 Copy the contents to the /home/<user>/.conky directory, start conky manager and enable conky "monitoring.template".
 
 ## Screenshot
-![Conky](https://github.com/emanuel36/conky_system_monitor/blob/master/conky_screenshot.png)
+![Conky](https://github.com/emanuel36/conky_system_monitor/blob/master/screenshots/conky_screenshot.png)
+![Desktop](https://github.com/emanuel36/conky_system_monitor/blob/master/screenshots/Desktop.png)
