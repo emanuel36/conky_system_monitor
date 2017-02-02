@@ -83,5 +83,5 @@ ${alignr}${voffset -30}${diskiograph_read 21,130 000000 43b6b8}
 ${offset 35}${color1}${font ubuntu:size=11} Writes: ${color2}${diskio_write}/s
 ${alignr}${voffset -30}${diskiograph_write 21,130 000000 43b6b8}
 ${offset 35}${color1}${fs_bar 9 /home}
-${offset 35}${color1}FS: ${color2}${fs_type}${goto 140}${color1}Used: ${color2}${fs_used_perc /home}%${alignr}${color2}${fs_free /}/${fs_size /}
+${offset 35}${color1}FS: ${color2}${fs_type}${goto 140}${color1}Used: ${color2}${fs_used_perc /home}%${alignr}${color2}${fs_used /}/${fs_size /}
 ${color1}${font ubuntu:size=7}Developed By: Emanuel Angelim
