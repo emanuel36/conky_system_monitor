@@ -15,7 +15,7 @@ minimum_size 0
 maximum_width 0
 own_window yes
 own_window_type dock
-own_window_transparent no
+own_window_transparent yes
 own_window_colour 000000
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 own_window_argb_visual yes

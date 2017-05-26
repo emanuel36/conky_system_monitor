@@ -3,7 +3,7 @@
 #email: emanuel_ec@alu.ufc.br #
 ###############################
 
-gap_x 20
+gap_x 10
 gap_y 30
 alignment top_right
 update_interval 0.4
@@ -41,7 +41,7 @@ ${offset 35}${color1}Uptime: ${color2}${uptime}
 #${offset 35}${color1}Temperature: ${color3}${exec sensors | grep -n 'CPU' | awk -F'+' '{print $2}' | awk -F' ' '{print $1}'}
 ${offset 35}${color1}Frq: ${color2}${freq_g 0} GHz
 ${offset 35}${color1}Used: ${color2}${cpu}%
-${alignr}${voffset -25}${cpugraph cpu0 21,170 000000 43b6b8}
+${alignr}${voffset -25}${cpugraph cpu0 21,210 000000 43b6b8}
 
 ${color1}memory: 
 ${offset 35}${color1}${membar 9 /home}
@@ -55,23 +55,23 @@ ${offset 35}${color1}top CPU: ${color2}${top name 1}${goto 250}${color2}${alignr
 ${offset 35}${color1}top RAM: ${color2}${top_mem name 1}${goto 250}${color2}${alignr}${top_mem mem 1}%
 
 ${color1}${font ubuntu:size=11} Transfers
-${offset 35}${color1}Down: ${color2}${downspeed wlp8s0}${alignr}${color1}
-${offset 35}${color1}Total: ${color2}${totaldown wlp8s0}
-${alignr}${voffset -30}${downspeedgraph wlp8s0 21,145 000000 43b6b8}
-${offset 35}${color1}Up: ${color2}${upspeed wlp8s0}${alignr}${color1}
-${offset 35}${color1}Total: ${color2}${totalup wlp8s0}
-${alignr}${voffset -30}${upspeedgraph wlp8s0 21,150 000000 43b6b8}
+${offset 35}${color1}Down: ${color2}${downspeed wlp3s0}/s${alignr}${color1}
+${offset 35}${color1}Total: ${color2}${totaldown wlp3s0}
+${alignr}${voffset -30}${downspeedgraph wlp3s0 21,185 000000 43b6b8}
+${offset 35}${color1}Up: ${color2}${upspeed wlp3s0}/s${alignr}${color1}
+${offset 35}${color1}Total: ${color2}${totalup wlp3s0}
+${alignr}${voffset -30}${upspeedgraph wlp3s0 21,185 000000 43b6b8}
 
-${color1}${font ubuntu:size=11} Network${if_existing /proc/net/route wlp8s0}
-${offset 35}${color1}Name: ${color2}${wireless_essid wlp8s0}
+${color1}${font ubuntu:size=11} Network${if_existing /proc/net/route wlp3s0}
+${offset 35}${color1}Name: ${color2}${wireless_essid wlp3s0}
 ${offset 35}${color1}Type: ${color2}${gw_iface}
-${offset 35}${color1}Force: ${color2}${wireless_link_qual_perc wlp8s0}%${else}
+${offset 35}${color1}Force: ${color2}${wireless_link_qual_perc wlp3s0}%${else}
 ${offset 35}${color1}Name: ${color2}unknown
 ${offset 35}${color1}Type: ${color2}unknown
 ${offset 35}${color1}Force: ${color2}unknown${endif}
 
-${color1}${font ubuntu:size=11} Address IP${if_existing /proc/net/route wlp8s0}
-${offset 35}${color1}Locl: ${color2}${addr wlp8s0}
+${color1}${font ubuntu:size=11} Address IP${if_existing /proc/net/route wlp3s0}
+${offset 35}${color1}Locl: ${color2}${addr wlp3s0}
 ${offset 35}${color1}Pass: ${color2}${gw_ip}
 ${else}
 ${offset 35}${color1}Locl: ${color2}xxx.xxx.xxx.xxx
@@ -79,9 +79,9 @@ ${offset 35}${color1}Pass: ${color2}xxx.xxx.xxx.xxx${endif}
 ${color1}${font ubuntu:size=11} Hard Drive 
 #${offset 35}${color1}Temperature: ${color3}${hddtemp}°C
 ${offset 35}${color1}${font ubuntu:size=11} Reads: ${color2}${diskio_read}/s
-${alignr}${voffset -30}${diskiograph_read 21,130 000000 43b6b8}
+${alignr}${voffset -30}${diskiograph_read 21,150 000000 43b6b8}
 ${offset 35}${color1}${font ubuntu:size=11} Writes: ${color2}${diskio_write}/s
-${alignr}${voffset -30}${diskiograph_write 21,130 000000 43b6b8}
+${alignr}${voffset -30}${diskiograph_write 21,150 000000 43b6b8}
 ${offset 35}${color1}${fs_bar 9 /home}
 ${offset 35}${color1}FS: ${color2}${fs_type}${goto 140}${color1}Used: ${color2}${fs_used_perc /home}%${alignr}${color2}${fs_used /}/${fs_size /}
 ${color1}${font ubuntu:size=7}Developed By: Emanuel Angelim
