@@ -7,8 +7,7 @@ Linux
 ## Installation
 You need the Conky Manager software, to install it execute the commands below in the terminal of linux.
 
-- sudo apt-add-repository ppa: teejee2008 / ppa -y
-- sudo apt-get update & & sudo apt-get install conky-manager
+- sudo dpkg -i conky-manager_2.4-136-ubuntu16.04.1_amd64.deb
 
 Copy the contents to the /home/<user>/.conky directory, start conky manager and enable conky "monitoring.sh".
 The clock can also be added to the desktop by enabling the file "time_and_date.sh"
